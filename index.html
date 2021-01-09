@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/0755ea8f05.css">
+    <style>
+        *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#header{
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    justify-content: space-between;
+    display: flex;
+    margin: 1rem 0.5rem;
+}
+.title{
+    border: blue solid 0.2rem;
+    padding: 0.3rem;
+    font-size: 2rem;
+    color: blue;
+    transition: all 2s ease;
+}
+.title:hover{
+    background-color: blue;
+    color:gainsboro;
+    border: solid gainsboro 0.2rem;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: blue;
+    display: block;
+    padding: 0.7rem;
+    font-size: 1.5rem;
+    transition: all 0.7s ease;
+}
+#menu li a{
+    display: block;
+}
+#menu li a:hover{
+    color: gainsboro;
+    background-color: blue;
+    padding-left: 3rem;
+
+}
+#banner{
+    background:linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.445)), url(https://c0.wallpaperflare.com/preview/576/516/896/5bea6ca7b7457.jpg) no-repeat center/cover fixed;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+.banner_title{
+    font-size:3rem;
+    padding: 1rem;
+}
+.unline{
+    background-color: blue;
+    height: 5px; width: 40vw;
+    margin: 0 auto;
+}
+#banner a{
+    font-size: 2rem;
+    padding: 0.3rem 1rem 0.5rem 1rem;
+    background-color: rgb(72, 72, 255);
+    color: white;
+    margin: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid 3px rgb(72, 72, 255);
+    transition:  border 0.5s ease-in-out;
+}
+#banner p{
+    padding: 0 5px;
+}
+#banner a:hover{
+    border: white solid 3px;
+}
+@media screen and (min-width:584px){
+    nav{
+        display: flex;
+        align-items: baseline;
+    }
+    #menu{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        flex: 1 1 auto;
+    }
+    nav li{
+        flex: 1 0 150px;
+        text-align: center;
+        list-style-type: none;
+    }
+    #menu li a:hover{
+        padding: 0.7rem;
+    }
+    .search_icon{
+        flex: 0 0 20px ;
+        color: gainsboro!important;
+        background-color: rgb(178, 178, 224);
+    }
+
+
+}
+/*skills section*/
+#skills{
+    padding: 3rem;
+}
+.skills_items{
+    text-align: center;
+    padding: 3rem;
+}
+.skills_items h4{
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: blue;
+}
+.skills_items p{
+    font-size: 1.1rem;
+}
+.skills_items i{
+    font-size: 4rem;
+    color: blue;
+    border-radius: 50%;
+    padding: 20px;
+    transition: all ease-in 0.5s;
+}
+.skills_items i:hover{
+    color: white;
+    background-color: blue;
+    transform: scale(0.7);
+}
+@media screen and (min-width:586px){
+    .skills_container{
+        max-width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .skills_items{
+        flex: 0 1 calc(50% - 1em);
+        padding: 1rem 0;
+    }
+}
+@media screen and (min-width:995px){
+    .skills_items{
+        flex: 0 1 calc(25% - 1em);
+    }
+}
+/*youtube section*/
+.youtube{
+    background-color: rgb(190, 190, 190);
+    padding: 2rem;
+}
+.youtube_details{
+    padding: 2rem 3rem 3rem 3rem;
+}
+.youtube_details h2{
+    color: white;
+    font-size: 2rem;
+}
+.youtube_details p{
+    margin: 2rem 0;
+}
+.youtube_details a{
+    color: white;
+    font-size: 2rem;
+    text-decoration:none;
+    background-color: blue;
+    border: 0.1rem solid blue;
+    padding: 0.3rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.youtube_details a:hover{
+    background-color: grey;
+    border: 0.1rem solid white;
+}
+.about_video{
+    padding: 1.5rem;
+}
+.about_video iframe{
+    border-radius: 20px;
+}
+@media screen and (min-width:780px){
+    .youtube{
+        display: flex;
+    }
+    .youtube_details{
+        min-height: 40vh;
+        flex: 0 0 50%;
+    }
+    .about_video{
+        min-height: 40vh;
+        flex: 0 0 50%;
+    }
+}
+/*services section*/
+.services{
+    background-color: rgb(238, 238, 238);
+    padding: 2rem;
+}
+.services_container{
+    padding: 2rem 1rem;
+}
+.services_items{
+    display: flex;
+}
+.items_box{
+    padding: 1rem;
+}
+.services_items .fa{
+    font-size: 3.5rem;
+    color: blue;
+    padding-top: 1.5rem;
+}
+.items_box h3{
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+    color: blue;
+}
+.services_items:hover .fa,
+.services_items:hover .items_box h3{
+    color: black;
+}
+.services_items:hover .items_box p{
+    color: rgb(80, 80, 80);
+}
+@media screen and (min-width:586px){
+    .services_container{
+        max-width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .services_items{
+        flex: 0 1 calc(50% - 1em);
+        padding: 1rem 0;
+    }
+}
+@media screen and (min-width:995px){
+    .services_items{
+        flex: 0 1 calc(33% - 1em);
+    }
+}
+
+/*porfolio section*/
+.portfolio{
+    background-color: rgb(190, 190, 190);
+    padding: 40px;
+}
+.portfolio_item{
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    max-height: 300px;
+    margin: 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.portfolio_item img{
+    display: block;
+
+    /*max-height: 300px;*/
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+.portfolio_item img:hover{
+    opacity: 0.4;
+}
+.img_content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: grey;
+    padding: 1rem;
+    margin-bottom: -100px;
+    display: flex;
+    justify-content: space-between;
+    transition: margin 3s ease;
+}
+.portfolio_item:hover .img_content{
+    margin-bottom: 0;
+}
+.img_content h4{
+    color: white;
+    font-size: 1.5rem;
+}
+.img_content .fa{
+    font-size: 1.5rem;
+    color: rgb(0, 132, 255);
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 1s ease, background 1s ease;
+}
+.img_content .fa:hover{
+    transform: scale(1.1);
+    background: blue;
+}
+.projects_btn{
+    display: block;
+    margin: 2rem 0;
+    text-align: center;
+    cursor: pointer;
+}
+.projects_btn a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 0.5rem 1rem;
+    transition: all 2s ease;
+}
+.projects_btn a:hover{
+    background-color: white;
+    color: blue;
+    border: solid 0.2rem;
+}
+
+@media screen and (min-width:586px){
+    .portfolio .portfolio_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 0.5rem;
+    }
+}
+@media screen and (min-width:995px){
+    .portfolio .portfolio_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 0.5rem;
+    }
+
+}
+
+/*number section*/
+#number{
+    background-color: rgb(238, 238, 238);
+    padding: 2rem;
+}
+.number_items{
+    text-align: center;
+    padding: 1rem;
+    margin: 5px;
+}
+.number_items i{
+    font-size: 3.5rem;
+    color: blue;
+}
+.number_items h3{
+    font-size: 3rem;
+}
+.number_items p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: grey;
+}
+@media screen and (min-width:600px){
+    .number_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width:1105px){
+    .number_container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/*Team Section*/
+.team{
+    background-color: grey;
+    padding: 2rem;
+}
+.team_container{
+    padding: 0.5rem 0;
+}
+.team_items{
+    background-color: gainsboro;
+    max-width: 90vw;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+.team_items img{
+    width: 100%;
+}
+.team_content{
+    padding: 0.5rem 1rem 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.team_text h4{
+    color: blue;
+    font-size: 1.3rem;
+    margin: 5px;
+}
+.team_text p{
+    color: grey;
+    font-size: 1.1rem;
+    margin: 5px;
+}
+.team_text ul{
+    display: flex;
+}
+.team_text li{
+    list-style-type: none;
+    margin: 0 8px;
+}
+.team_text ul a{
+    color: grey;
+}
+.team_content .arrow_logo{
+    font-size: 2.5rem;
+    margin: 1rem 0.5rem 0 0;
+    color: blue;
+    opacity: 0;
+    align-self: center;
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.team_items:hover .team_content .arrow_logo{
+    opacity: 1;
+}
+.team_content .arrow_logo:hover{
+    transform: rotate(-90deg);
+}
+@media screen and (min-width:600px){
+    .team_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 0.5rem;
+    }
+}
+@media screen and (min-width:1105px){
+    .team_container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/*customer section*/
+.customer{
+    background-color: rgb(32, 32, 32);
+    padding: 2rem;
+}
+.customer_container{
+    padding: 0.5rem;
+}
+.customer_items{
+    max-width: 90vw;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+}
+.customer_items img{
+    width: 60%;
+    border-radius: 50%;
+}
+.customer_items h3{
+    color: blue;
+    margin-top: 0.5rem;
+}
+.customer_items h4{
+    color: grey;
+    margin: 0.5rem 0;
+}
+.customer_items p{
+    color: white;
+    padding: 0 3rem;
+}
+@media screen and (min-width:750px){
+    .customer_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width:1105px){
+    .customer_container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*Contact Section*/
+.contact{
+    background-color: rgb(0, 162, 255);
+    padding: 2rem;
+    color: white;
+}
+.add_contact{
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.add_contact p i{
+    margin-bottom: 25px;
+}
+.msg_box{
+    padding: 1rem;
+}
+.msg_box form{
+    display: flex;
+    flex-direction: column;
+}
+form input{
+    font-size: 2rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    border-bottom: 4px solid white;
+    color: white;
+}
+.msg_box a{
+    background-color: black;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    margin: 1rem auto;
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+    transition: background 1s ease;
+}
+.msg_box ::placeholder{
+    color: white;
+}
+.msg_box a:hover{
+    background-color: rgb(73, 73, 73);
+}
+@media screen and (min-width:850px){
+    .contact_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:499px){
+    html{
+        font-size: 0.8rem;
+    }
+    .about_video iframe{
+        height: 200px;
+    }
+    .projects_btn a {
+        font-size: 1.65rem;
+        padding: 0.5rem;}
+    .msg_box a{
+        padding: 1.5rem 2rem;
+    }
+}
+
+/*utility classes*/
+.sec_title{
+    font-size: 2.5rem;
+    margin: 1rem;
+    color: rgb(83, 83, 83);
+}
+.sec_title_unline{
+    background-color: blue;
+    height: 8px; width: 70px;
+    transition: all 4s;
+}
+.sec_title:hover .sec_title_unline{
+    width: 200px;
+    background-color: red;
+    cursor: pointer;
+}
+.sec_title:hover{
+    cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <nav class="nav">
+        <div class="heading">
+            <div class="title">
+                Coding
+            </div>
+        </div>
+            <ul id="menu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#number">Blog</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li class="search_icon"><a href=""><i class="fa fa-search"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <section id="banner">
+            <div class="banner_title">
+                <h2>CODDING ADDICT</h2>
+                <div class="unline"></div>
+            </div>
+            <p>Codding Addict Meets The Power Of CSS FlexBox</p>
+            <a href="#"><i class="fa fa-lightbulb-o"> Explore</i></a>
+        </section>
+    </header>
+<!--skill section-->
+    <section id="skills">
+        <div class="sec_title">
+            <h3>Skills</h3>
+            <div class="sec_title_unline"></div>
+        </div>
+        <div class="skills_container">
+            <div class="skills_items">
+                <i class="fa fa-pie-chart"></i>
+                <h4>Best Data</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo earum ad possimus adipisci facilis iure.</p>
+            </div>
+            <div class="skills_items">
+                <i class="fa fa-line-chart"></i>
+                <h4>Best Results</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo earum ad possimus adipisci facilis iure.</p>
+            </div>
+            <div class="skills_items">
+                <i class="fa fa-bolt"></i>
+                <h4>Fastest Skeep</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo earum ad possimus adipisci facilis iure.</p>
+            </div>
+            <div class="skills_items">
+                <i class="fa fa-flask"></i>
+                <h4>Innovation</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo earum ad possimus adipisci facilis iure.</p>
+            </div>
+        </div>
+    </section>
+    <section class="youtube">
+        <div class="youtube_details">
+            <h2>Create Websites the Easy Way</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium beatae ut, at eum maiores facilis provident necessitatibus labore magni laboriosam soluta vitae. Ipsum suscipit veniam at. Fuga nam quod consequatur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odio, doloribus modi eos quam culpa nihil nam. Veniam alias voluptates, maiores esse voluptatum cumque deserunt accusantium totam fugiat dolor vel!</p>
+            <a href="">KNOW MORE <i class="fa fa-gears"></i></a>
+        </div>
+        <div class="about_video">
+            <iframe width="100%" height="350px" src="https://www.youtube.com/embed/qGxZs0cVNbk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+       </section>
+       <section class="services">
+           <div class="sec_title">
+               <h2>Services</h2>
+               <div class="sec_title_unline"></div>
+           </div>
+           <div class="services_container">
+               <article class="services_items">
+                   <i class="fa fa-code"></i>
+                <div class="items_box">
+                    <h3>Clean Code</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, deserunt?</p>
+                </div>
+               </article>
+               <article class="services_items">
+                   <i class="fa fa-comment-o"></i>
+                <div class="items_box">
+                    <h3>Clean Text</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, deserunt?</p>
+                </div>
+               </article>
+               <article class="services_items">
+                   <i class="fa fa-code-fork"></i>
+                <div class="items_box">
+                    <h3>Code Fork</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, deserunt?</p>
+                </div>
+               </article>
+               <article class="services_items">
+                   <i class="fa fa-codepen"></i>
+                <div class="items_box">
+                    <h3>Codepen</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, deserunt?</p>
+                </div>
+               </article>
+               <article class="services_items">
+                   <i class="fa fa-css3"></i>
+                <div class="items_box">
+                    <h3>CSS 3</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, deserunt?</p>
+                </div>
+               </article>
+               <article class="services_items">
+                   <i class="fa fa-html5"></i>
+                <div class="items_box">
+                    <h3>HTML 5</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, deserunt?</p>
+                </div>
+               </article>
+           </div>
+       </section>
+<!--portfolio section-->
+       <section class="portfolio" id="portfolio">
+        <div class="sec_title">
+            <h2>Portfolio</h2>
+            <div class="sec_title_unline"></div>
+        </div>   
+        <div class="portfolio_container">
+            <article class="portfolio_item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Electronics-projects.jpg" alt="">
+                <div class="img_content">
+                    <div class="img_text">
+                        <h4>Job Name</h4>
+                        <p>Delhi, India</p>
+                    </div>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </article>
+            <article class="portfolio_item">
+                <img src="https://c0.wallpaperflare.com/preview/389/615/630/business-businessman-communication-concept.jpg" alt="">
+                <div class="img_content">
+                    <div class="img_text">
+                        <h4>Job Name</h4>
+                        <p>Delhi, India</p>
+                    </div>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </article>
+            <article class="portfolio_item">
+                <img src="https://c2.staticflickr.com/6/5042/5331017892_9846bd00c9_b.jpg" alt="">
+                <div class="img_content">
+                    <div class="img_text">
+                        <h4>Job Name</h4>
+                        <p>Delhi, India</p>
+                    </div>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </article>
+            <article class="portfolio_item">
+                <img src="https://cdn2.picryl.com/photo/1997/01/01/space-shuttle-projects-01c8e8-1024.jpg" alt="">
+                <div class="img_content">
+                    <div class="img_text">
+                        <h4>Job Name</h4>
+                        <p>Delhi, India</p>
+                    </div>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </article>
+            <article class="portfolio_item">
+                <img src="https://live.staticflickr.com/8462/7984583510_8f18b6f30b_b.jpg" alt="">
+                <div class="img_content">
+                    <div class="img_text">
+                        <h4>Job Name</h4>
+                        <p>Delhi, India</p>
+                    </div>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </article>
+            <article class="portfolio_item">
+                <img src="https://media.defense.gov/2016/Jun/07/2001550393/780/780/0/160607-F-XM588-003.JPG" alt="">
+                <div class="img_content">
+                    <div class="img_text">
+                        <h4>Job Name</h4>
+                        <p>Delhi, India</p>
+                    </div>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </article>
+           </div>
+           <div class="projects_btn">
+               <a href=""><i class="fa fa-lightbulb-o"></i> Explore More Projects</a>
+           </div>
+       </section>
+<!--number section-->
+<section id="number">
+    <div class="sec_title">
+        <h2>Numbers</h2>
+        <div class="sec_title_unline"></div>
+    </div>
+    <div class="number_container">
+        <div class="number_items">
+            <i class="fa fa-check"></i>
+            <h3>250</h3>
+            <p>Projects Completed</p>
+        </div>
+        <div class="number_items">
+            <i class="fa fa-clock-o"></i>
+            <h3>500</h3>
+            <p>Hours</p>
+        </div>
+        <div class="number_items">
+            <i class="fa fa-desktop"></i>
+            <h3>750</h3>
+            <p>Computers</p>
+        </div>
+        <div class="number_items">
+            <i class="fa fa-cloud-upload"></i>
+            <h3>1000</h3>
+            <p>Uploads</p>
+        </div>
+    </div>
+</section>
+<section class="team">
+    <div class="sec_title">
+        <h2>Team</h2>
+        <div class="sec_title_unline"></div>
+    </div>
+    <div class="team_container">
+        <div class="team_items">
+            <img src="https://farm3.staticflickr.com/2775/4064469606_b0965473e0_b.jpg" alt="">
+            <div class="team_content">
+                <div class="team_text">
+                    <h4>Inshan Kashyap</h4>
+                    <p>Web Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <a href="" class="arrow_logo">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="team_items">
+            <img src="https://cdn.pixabay.com/photo/2017/12/23/23/28/businessman-3036181_960_720.jpg" alt="">
+            <div class="team_content">
+                <div class="team_text">
+                    <h4>Inshan Kashyap</h4>
+                    <p>Web Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <a href="" class="arrow_logo">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="team_items">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Counter_Assault_Team_member_at_Rowley_Training_Center_in_2018.jpg" alt="">
+            <div class="team_content">
+                <div class="team_text">
+                    <h4>Inshan Kashyap</h4>
+                    <p>Web Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <a href="" class="arrow_logo">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="team_items">
+            <img src="https://cdn.pixabay.com/photo/2015/01/09/11/11/office-594132_960_720.jpg" alt="">
+            <div class="team_content">
+                <div class="team_text">
+                    <h4>Inshan Kashyap</h4>
+                    <p>Web Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <a href="" class="arrow_logo">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+ 
+        </div>
+    </div>
+</section>
+
+<!--customer sectoin-->
+<section class="customer">
+    <div class="sec_title">
+        <h2>Customer Reviews</h2>
+        <div class="sec_title_unline"></div>
+    </div>
+    <div class="customer_container">
+        <div class="customer_items">
+            <img src="https://farm3.staticflickr.com/2775/4064469606_b0965473e0_b.jpg" alt="">
+            <h3>Ishan Kashyap</h3>
+            <h4>Web Developer</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate architecto. Ullam temporibus fugiat repudiandae, beatae qui iste rem culpa.</p>
+
+        </div>
+        <div class="customer_items">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Counter_Assault_Team_member_at_Rowley_Training_Center_in_2018.jpg" alt="">
+            <h3>Ishan Kashyap</h3>
+            <h4>Web Developer</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate architecto. Ullam temporibus fugiat repudiandae, beatae qui iste rem culpa.</p>
+
+        </div>
+        <div class="customer_items">
+            <img src="https://cdn.pixabay.com/photo/2015/01/09/11/11/office-594132_960_720.jpg" alt="">
+            <h3>Ishan Kashyap</h3>
+            <h4>Web Developer</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptate architecto. Ullam temporibus fugiat repudiandae, beatae qui iste rem culpa.</p>
+
+        </div>
+    </div>
+</section>
+
+<!--Contact Section-->
+<section class="contact" id="contact">
+    <div class="sec_title">
+        <h2>Contact Us</h2>
+        <div class="sec_title_unline"></div>
+    </div>
+    <div class="contact_container">
+        <div class="add_contact">
+            <p><i class="fa fa-map-marker"> Mangol Puri, New Delhi</i></p>
+            <p><i class="fa fa-phone"> 011-25875385</i></p>
+            <p><i class="fa fa-envelope"> email@email.com</i></p>
+            <p><i class="fa fa-clock-o"> 10 AM to 6 PM</i></p>
+        </div>
+        <div class="msg_box">
+            <form action="">
+                <input type="text" id="name" placeholder="Name">
+                <input type="email" name="" id="email" placeholder="Email">
+                <input type="text" id="subject" placeholder="Subject">
+                <input type="text" id="message" placeholder="Message">
+            </form>
+             <a href=""><i class="fa fa-envelope"> </i> Send Message</a>
+        </div>
+    </div>
+</section>
+
+<script src="https://use.fontawesome.com/5af9989b85.js"></script>
+</body>
+
+</html>
